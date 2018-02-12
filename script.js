@@ -145,7 +145,7 @@ function Twelve() {
     let destination = document.getElementById('div12');
     const div = document.createElement('div');
     let be = bestof.slice(0,14);
-    div.textContent = be
+    div.textContent = be;
     div12.appendChild(div);
 
 
@@ -154,23 +154,89 @@ function Twelve() {
 
 // Katas #13 - Using slice, display the last 12 characters from bestThing
 
+function Thirteen() {
+
+    let destination = document.getElementById('div13');
+    const div = document.createElement('div');
+    let be = bestof.slice(-12);
+    div.textContent = be;
+    div13.appendChild(div);
+}
+
 
 // Katas #14 - Using slice, display characters between the 23rd and 38th position of bestThing (i.e., "boolean is even"
 
+function Fourteen() {
+
+    let destination = document.getElementById('div14');
+    const div = document.createElement('div');
+    let be = bestof.slice(22, 38);
+    div.textContent = be;
+    div14.appendChild(div);
+}
 
 // Katas #15 - Repeat #13 using substring instead of slice.
+
+function Fifteen() {
+
+    let destination = document.getElementById('div15');
+    const div = document.createElement('div');
+    let be = bestThing.substring(bestThing.length - 12);
+    div.textContent = be;
+    div15.appendChild(div);
+
+}
 
 
 // Katas #16 - Repeat #14 using substr instead of slice.
 
+function Sixteen() {
+
+    let destination = document.getElementById('div16');
+    const div = document.createElement('div');
+    let be = bestThing.substring(22, 38);
+    div.textContent = be;
+    div16.appendChild(div);
+}
+
 
 // Katas #17 - Find and display the index of "only" in bestThing
+
+function Seventeen() {
+
+    let destination = document.getElementById('div17');
+    const div = document.createElement('div');
+    let be = bestThing.indexOf('only');
+    div.textContent = be;
+    div17.appendChild(div);
+}
 
 
 // Katas #18 - Find and display the index of the last word in bestThing
 
+function Eighteen() {
+
+    let destination = document.getElementById('div18');
+    const div = document.createElement('div');
+    let be = bestThing.indexOf('bit');
+    div.textContent = be;
+    div18.appendChild(div);
+}
+
 
 // Katas #19 - Find and display all cities from gotCitiesCSV  that use double vowels ("aa","ee", etc.)
+
+function Nineteen() {
+
+    let destination = document.getElementById('div19');
+    const div = document.createElement('div');
+
+    if (gotCitiesCSV.includes('aa')) {
+        
+        div19.appendChild(div);
+    }
+    
+}
 
 
 // Katas #20 - Find and display all cities from lotrCitiesArray that end with "or"
@@ -224,3 +290,10 @@ Nine();
 Ten();
 Eleven();
 Twelve();
+Thirteen();
+Fourteen();
+Fifteen();
+Sixteen();
+Seventeen();
+Eighteen();
+Nineteen();
