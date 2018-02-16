@@ -230,52 +230,198 @@ function Nineteen() {
 
     let destination = document.getElementById('div19');
     const div = document.createElement('div');
+    let search = /aa|ee|ii|oo|uu/gi;
+    
 
-    if (gotCitiesCSV.includes('aa')) {
+    let result = cities.filter(elem => search.test(elem));
+            
+             div.textContent = result;
+             div19.appendChild(div);
         
-        div19.appendChild(div);
-    }
     
 }
 
 
 // Katas #20 - Find and display all cities from lotrCitiesArray that end with "or"
 
+function Twenty() {
+
+    let destination = document.getElementById('div20');
+    const div = document.createElement('div');
+    let search = /or$/i;
+
+    let result = lotrCitiesArray.filter(elem => search.test(elem));
+    
+        div.textContent = result;
+        div20.appendChild(div);
+
+}
+
 
 // Katas #21 - Find and display all the words in bestThing that start with a "b"
+
+function TwentyOne() {
+
+    let destination = document.getElementById('div21');
+    const div = document.createElement('div');
+    let search = /^b/gi;
+
+    let result = best.filter(elem => search.test(elem));
+
+        div.textContent = result;
+        div21.appendChild(div);
+}
 
 
 // Katas #22 - Display "Yes" or "No" if lotrCitiesArray includes "Mirkwood"
 
+function TwentyTwo() {
+
+    let destination = document.getElementById('div22');
+    const div = document.createElement('div');
+
+    if (lotrCitiesArray.includes('Mirkwood')) {
+
+        div.textContent = "Yes";
+        div22.appendChild(div);
+    }
+}
+
 
 // Katas #23 - Display "Yes" or "No" if lotrCitiesArray includes "Hollywood"
+
+function TwentyThree() {
+
+    let destination = document.getElementById('div23');
+    const div = document.createElement('div');
+
+    if (lotrCitiesArray.includes('Hollywood')) {
+
+        div.textContent = 'Yes';
+        div23.appendChild(div);
+
+    }
+
+        else {
+
+            div.textContent = 'No';
+            div23.appendChild(div);
+        }
+    
+}
 
 
 // Katas #24 - Display the index of "Mirkwood" in lotrCitiesArray
 
+function TwentyFour() {
+
+    let destination = document.getElementById('div24');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.indexOf('Mirkwood');
+    div24.appendChild(div);
+}
+
 
 // Katas #25 - Find and display the first city in lotrCitiesArray that has more than one word
+
+function TwentyFive() {
+
+    let destination = document.getElementById('div25');
+    const div = document.createElement('div');
+
+    let search = / /gi;
+
+    let result = lotrCitiesArray.filter(elem => search.test(elem));
+
+    div.textContent = result;
+    div25.appendChild(div);
+}
 
 
 // Katas #26 - Reverse the order in lotrCitiesArray
 
+function TwentySix() {
+
+    let destination = document.getElementById('div26');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.reverse();
+    div26.appendChild(div);
+}
+
 
 // Katas #27 - Sort lotrCitiesArray alphabetically
+
+function TwentySeven() {
+
+    let destination = document.getElementById('div27');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.sort();
+    div27.appendChild(div);
+}
 
 
 // Katas #28 - Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)
 
+function TwentyEight() {
+
+    let destination = document.getElementById('div28');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.sort(function(a, b) {return b.length - a.length});
+    div28.appendChild(div);
+}
+
 
 // Katas #29 - Using pop, remove the last city from lotrCitiesArray
+
+function TwentyNine() {
+
+    let destination = document.getElementById('div29');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.pop();
+    div29.appendChild(div);
+}
 
 
 // Katas #30 - Using push, add back the city from lotrCitiesArray that was removed in #29 to the back of the array
 
+function Thirty() {
+
+    let destination = document.getElementById('div30');
+    const div = document.createElement('div');
+
+    let pushy = lotrCitiesArray.push('Rohan');
+    div.textContent = pushy
+    div30.appendChild(div);
+}
+
 
 // Katas #31 - Using shift, remove the first city from lotrCitiesArray
 
+function ThirtyOne() {
+
+    let destination = document.getElementById('div31');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.shift();
+    div31.appendChild(div);
+}
+
 
 // Katas #32 -Using unshift, add back the city from lotrCitiesArray that was removed in #31 to the front of the array
+
+function ThirtyTwo() {
+
+    let destination = document.getElementById('div32');
+    const div = document.createElement('div');
+
+    div.textContent = lotrCitiesArray.unshift('Deadest Marshes');
+    div32.appendChild(div);
+}
 
 
 One();
@@ -297,3 +443,16 @@ Sixteen();
 Seventeen();
 Eighteen();
 Nineteen();
+Twenty();
+TwentyOne();
+TwentyTwo();
+TwentyThree();
+TwentyFour();
+TwentyFive();
+TwentySix();
+TwentySeven();
+TwentyEight();
+TwentyNine();
+Thirty();
+ThirtyOne();
+ThirtyTwo();
